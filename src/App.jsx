@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div style={{height:"100vh"}}>
+    <div style={{ height: "100vh" }}>
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
