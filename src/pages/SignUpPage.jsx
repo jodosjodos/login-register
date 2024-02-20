@@ -19,8 +19,8 @@ const FullWidthButton = styled(Button)`
 
 const LoginButton = styled(FullWidthButton)`
   background-color: #cbbbf7;
-  border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 6px 10px 0px 0px;
+
   border-top: 2px solid black;
   border-left: 2px solid black;
   &:hover {
@@ -33,7 +33,7 @@ const LoginButton = styled(FullWidthButton)`
 
 const SignUpButton = styled(FullWidthButton)`
   background-color: #087865;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 10px 6px 0px 0px;
   border-top: 2px solid black;
   border-right: 2px solid black;
   &:hover {
