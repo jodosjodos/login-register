@@ -30,28 +30,29 @@ const LoginButton = styled(FullWidthButton)`
 `;
 
 const SignUpButton = styled(FullWidthButton)`
-  background-color: #76c1b5;
+  background-color: #087865;
   border-radius: 10px 6px 0px 0px;
   border: 2px solid black;
 
   &:hover {
-    background-color: #087865;
+    background-color:#76C1B5;
     color: white;
     border: 2px solid black;
   }
 `;
 
 const LoginButton2 = styled(Button)`
-  background-color: #cbbbf7;
+  background-color: #B2E5DD;
   margin-bottom: 4px;
   border: none;
   align-self: center;
   justify-self: center;
-  color: #21004c;
+  color: #00382F;
   height: auto;
+  font-weight:bold;
   width: 40%;
   &:hover {
-    background-color: #6713a0;
+    background-color:#087865;
     color: white;
   }
 `;

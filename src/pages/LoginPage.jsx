@@ -49,6 +49,8 @@ const LoginButton2 = styled(Button)`
   justify-self:center;
   color: #21004c;
   height:auto;
+  font-weight:bold;
+
   width:40%;
   &:hover {
     background-color: #6713a0;
