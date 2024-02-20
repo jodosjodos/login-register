@@ -18,30 +18,30 @@ const FullWidthButton = styled(Button)`
 `;
 
 const LoginButton = styled(FullWidthButton)`
-  background-color:#cbbbf7 ;
-  border-radius : 5px 5px 0px 0px;
+  background-color: #cbbbf7;
+  border-radius: 5px 5px 0px 0px;
 
   &:hover {
-    background-color:#6713a0 ;
-    color:white;
+    background-color: #6713a0;
+    color: white;
   }
 `;
 
 const SignUpButton = styled(FullWidthButton)`
   background-color: #087865;
-  border-radius : 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
   &:hover {
-    background-color:#76c1b5 ;
+    background-color: #76c1b5;
     color: white;
   }
 `;
 
 const LoginButton2 = styled(FullWidthButton)`
   display: block;
-  background-color: #B2E5DD;
+  background-color: #b2e5dd;
   margin-bottom: 4px;
-  color: #00382F;
-  font-weight :bold;
+  color: #00382f;
+  font-weight: bold;
   &:hover {
     background-color: #087865;
     color: white;
@@ -49,13 +49,14 @@ const LoginButton2 = styled(FullWidthButton)`
 `;
 
 const CustomInput = styled(Form.Control)`
-  background-color: #cbcacb; 
+  background-color: #cbcacb;
   color: black;
   &::placeholder {
     color: #6f6e72;
-  }&:focus {
+  }
+  &:focus {
     background-color: #cbcacb;
-    border:none;
+    border: none;
     outline: none;
   }
 `;
@@ -65,10 +66,14 @@ const FormComponent = styled(Form)`
   flex-direction: column;
   padding: 12px;
 `;
-const Labeled= styled(Form.Label)`
-font-weight:bold;
-`
-
+const Labeled = styled(Form.Label)`
+  font-weight: bold;
+`;
+const CustomCol = styled(Col)`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 export function SignUpPage() {
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -87,10 +92,11 @@ export function SignUpPage() {
               gap: "16px",
               border: "2px solid black",
               borderRadius: "12px",
+              outline: "medium double #ccc",
               padding: "12px",
               height: "100%",
-              display:"flex",
-              flexDirection: "column"
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <Row>
@@ -117,26 +123,26 @@ export function SignUpPage() {
               </Form.Group>
               <LoginButton2>Let's go</LoginButton2>
               <div className="d-flex align-items-center justify-content-center gap-2">
-                <hr style={{width:"30%"}}/>
+                <hr style={{ width: "30%" }} />
                 <p className="mb-1">or continue with </p>
-                <hr style={{width:"30%"}}/>
+                <hr style={{ width: "30%" }} />
               </div>
               <Row>
-                <Col style={{}}>
-                <img src="/google.png" alt="google image" />
-                </Col>
-                <Col>
-                <img src="/meta.png" alt="meta image" />
-                </Col>
-                <Col>
-                <img src="/github.png" alt="github image" />
-                </Col>
-                <Col>
-                <img src="/metamask.png" alt="metamask image" />
-                </Col>
-                <Col>
-                <img src="/unknown.png" alt="unknown image" />
-                </Col>
+                <CustomCol style={{}}>
+                  <img src="/google.png" alt="google image" />
+                </CustomCol>
+                <CustomCol>
+                  <img src="/meta.png" alt="meta image" />
+                </CustomCol>
+                <CustomCol>
+                  <img src="/github.png" alt="github image" />
+                </CustomCol>
+                <CustomCol>
+                  <img src="/metamask.png" alt="metamask image" />
+                </CustomCol>
+                <CustomCol>
+                  <img src="/unknown.png" alt="unknown image" />
+                </CustomCol>
               </Row>
             </FormComponent>
           </Col>

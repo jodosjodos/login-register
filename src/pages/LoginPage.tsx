@@ -45,14 +45,14 @@ const LoginButton2 = styled(FullWidthButton)`
 `;
 
 const CustomInput = styled(Form.Control)`
-  background-color: #cbcacb; 
-  color: black; 
+  background-color: #cbcacb;
+  color: black;
   &::placeholder {
     color: #6f6e72;
   }
   &:focus {
     background-color: #cbcacb;
-    border:none;
+    border: none;
     outline: none;
   }
 `;
@@ -62,12 +62,11 @@ const FormComponent = styled(Form)`
   flex-direction: column;
   padding: 12px;
 `;
-const Header = styled(CardHeader)` 
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
+const Header = styled(CardHeader)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -75,7 +74,7 @@ export function LoginPage() {
     navigate("/signUp");
   };
   return (
-    <div style={{ height: "100%" ,padding:"0px 4px"}}>
+    <div style={{ height: "100%", padding: "0px 4px" }}>
       <Header>
         <h1>Login</h1>
       </Header>
@@ -91,6 +90,7 @@ export function LoginPage() {
                 gap: "10px",
                 border: "2px solid black",
                 borderRadius: "12px",
+                outline: "medium double #ccc",
                 padding: "12px",
                 height: "100%",
               }}
