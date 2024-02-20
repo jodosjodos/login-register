@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, CardHeader } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -8,7 +8,7 @@ const StyledContainer = styled(Container)`
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 10px 0 10px 0;
+  padding: 10px;
 `;
 
 const FullWidthButton = styled(Button)`
@@ -83,6 +83,11 @@ const CustomCol = styled(Col)`
     cursor: pointer;
   }
 `;
+const Header = styled(CardHeader)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 export function SignUpPage() {
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -90,13 +95,13 @@ export function SignUpPage() {
   };
   return (
     <div style={{ height: "100%", padding: "0px 4px" ,background:"#0000001A"}}>
-      <div className="d-flex justify-content-center  align-item-center">
+      <Header>
         <h1>Sign up</h1>
-      </div>
-      <div>
+      </Header>
+      <div style={{height:"80%"}}>
 
-      <StyledContainer>
-        <Row className="justify-content-center" style={{ height: "100%" }}>
+      <StyledContainer style={{ justifyContent: "flex-start" }}>
+        <Row className="justify-content-center" style={{ height: "fit-content" }}>
           <Col
             md={6}
             style={{

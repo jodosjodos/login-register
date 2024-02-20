@@ -80,7 +80,9 @@ const Header = styled(CardHeader)`
   align-items: center;
   justify-content: center;
 `;
-
+const Labeled = styled(Form.Label)`
+  font-weight: bold;
+`;
 export function LoginPage() {
   const navigate = useNavigate();
   const handleSignUp = () => {
@@ -126,11 +128,11 @@ export function LoginPage() {
               >
                 <FormComponent className="d-flex flex-column">
                   <Form.Group className="mb-4">
-                    <Form.Label>Username</Form.Label>
+                    <Labeled>Username</Labeled>
                     <CustomInput type="text" placeholder="value"></CustomInput>
                   </Form.Group>
                   <Form.Group className="mb-4">
-                    <Form.Label>Password</Form.Label>
+                    <Labeled>Password</Labeled>
                     <CustomInput type="email" placeholder="value"></CustomInput>
                   </Form.Group>
                   <LoginButton2>Let&apos;s go</LoginButton2>
