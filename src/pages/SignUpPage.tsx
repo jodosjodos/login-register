@@ -18,38 +18,45 @@ const FullWidthButton = styled(Button)`
 `;
 
 const LoginButton = styled(FullWidthButton)`
-  background-color: #6713a0;
+  background-color:#cbbbf7 ;
+  border-radius : 5px 5px 0px 0px;
+
   &:hover {
-    background-color: #cbbbf7;
-    color: #21004c;
+    background-color:#6713a0 ;
+    color:white;
   }
 `;
 
 const SignUpButton = styled(FullWidthButton)`
-  background-color: #76c1b5;
+  background-color: #087865;
+  border-radius : 5px 5px 0px 0px;
   &:hover {
-    background-color: #087865;
+    background-color:#76c1b5 ;
     color: white;
   }
 `;
 
 const LoginButton2 = styled(FullWidthButton)`
   display: block;
-  background-color: #cbbbf7;
+  background-color: #B2E5DD;
   margin-bottom: 4px;
-  color: #21004c;
+  color: #00382F;
+  font-weight :bold;
   &:hover {
-    background-color: #6713a0;
+    background-color: #087865;
     color: white;
   }
 `;
 
 const CustomInput = styled(Form.Control)`
-  background-color: #cbcacb; /* Custom background color */
-  color: black; /* Text color */
+  background-color: #cbcacb; 
+  color: black;
   &::placeholder {
-    /* Custom placeholder color */
     color: #6f6e72;
+  }&:focus {
+    background-color: #cbcacb;
+    border:none;
+    outline: none;
   }
 `;
 const FormComponent = styled(Form)`
@@ -58,6 +65,9 @@ const FormComponent = styled(Form)`
   flex-direction: column;
   padding: 12px;
 `;
+const Labeled= styled(Form.Label)`
+font-weight:bold;
+`
 
 export function SignUpPage() {
   const navigate = useNavigate();
@@ -65,7 +75,7 @@ export function SignUpPage() {
     navigate("/");
   };
   return (
-    <div className="h-full">
+    <div className="h-full px-3">
       <div className="d-flex justify-content-center  align-item-center">
         <h1>Sign up</h1>
       </div>
@@ -74,11 +84,13 @@ export function SignUpPage() {
           <Col
             md={6}
             style={{
-              gap: "10px",
+              gap: "16px",
               border: "2px solid black",
               borderRadius: "12px",
               padding: "12px",
               height: "100%",
+              display:"flex",
+              flexDirection: "column"
             }}
           >
             <Row>
@@ -91,16 +103,16 @@ export function SignUpPage() {
             </Row>
             <FormComponent className="d-flex flex-column">
               <Form.Group className="mb-4">
-                <Form.Label>Email address</Form.Label>
+                <Labeled>Email address</Labeled>
                 <CustomInput type="email" placeholder="value"></CustomInput>
               </Form.Group>
 
               <Form.Group className="mb-4">
-                <Form.Label>Username</Form.Label>
+                <Labeled>Username</Labeled>
                 <CustomInput type="text" placeholder="value"></CustomInput>
               </Form.Group>
               <Form.Group className="mb-4">
-                <Form.Label>Password</Form.Label>
+                <Labeled>Password</Labeled>
                 <CustomInput type="email" placeholder="value"></CustomInput>
               </Form.Group>
               <LoginButton2>Let's go</LoginButton2>

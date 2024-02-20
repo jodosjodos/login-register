@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, CardHeader } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -45,11 +45,15 @@ const LoginButton2 = styled(FullWidthButton)`
 `;
 
 const CustomInput = styled(Form.Control)`
-  background-color: #cbcacb; /* Custom background color */
-  color: black; /* Text color */
+  background-color: #cbcacb; 
+  color: black; 
   &::placeholder {
-    /* Custom placeholder color */
     color: #6f6e72;
+  }
+  &:focus {
+    background-color: #cbcacb;
+    border:none;
+    outline: none;
   }
 `;
 const FormComponent = styled(Form)`
@@ -58,23 +62,23 @@ const FormComponent = styled(Form)`
   flex-direction: column;
   padding: 12px;
 `;
+const Header = styled(CardHeader)` 
+display: flex;
+align-items: center;
+justify-content: center;
+`
 
-const ParentOne = styled(Col)`
-  background-color: white;
-  border: 5px solid #ccc;
-  border-radius: 5px;
-  padding: 4px;
-`;
+
 export function LoginPage() {
   const navigate = useNavigate();
   const handleSignUp = () => {
     navigate("/signUp");
   };
   return (
-    <div style={{ height: "100%" }}>
-      <div className="d-flex justify-content-center  align-item-center">
+    <div style={{ height: "100%" ,padding:"0px 4px"}}>
+      <Header>
         <h1>Login</h1>
-      </div>
+      </Header>
       <div style={{ height: "80%" }}>
         <StyledContainer className="" style={{ justifyContent: "flex-start" }}>
           <Row
