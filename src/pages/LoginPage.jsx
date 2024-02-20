@@ -20,34 +20,36 @@ const FullWidthButton = styled(Button)`
 const LoginButton = styled(FullWidthButton)`
   background-color: #6713a0;
   border-radius: 6px 10px 0px 0px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  &:hover {
+  border: 2px solid black;
+  &:hover,&:active {
     background-color: #cbbbf7;
     color: #21004c;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
+    border: 2px solid black;
   }
 `;
 
 const SignUpButton = styled(FullWidthButton)`
   background-color: #76c1b5;
   border-radius: 10px 6px 0px 0px;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid black;
+
 
   &:hover {
     background-color: #087865;
     color: white;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
+    border: 2px solid black;
   }
 `;
 
-const LoginButton2 = styled(FullWidthButton)`
+const LoginButton2 = styled(Button)`
   background-color: #cbbbf7;
   margin-bottom: 4px;
+  border: none;
+  align-self:center;
+  justify-self:center;
   color: #21004c;
+  height:auto;
+  width:40%;
   &:hover {
     background-color: #6713a0;
     color: white;
@@ -70,7 +72,8 @@ const FormComponent = styled(Form)`
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  padding:12px 40px
+  justify-content:center;
+  align-items: center;
 `;
 const Header = styled(CardHeader)`
   display: flex;
@@ -84,7 +87,7 @@ export function LoginPage() {
     navigate("/signUp");
   };
   return (
-    <div style={{ height: "100%", padding: "0px 4px" }}>
+    <div style={{ height: "100%", padding: "0px 4px" ,background:"#0000001A"}}>
       <Header>
         <h1>Login</h1>
       </Header>
@@ -98,7 +101,8 @@ export function LoginPage() {
               md={6}
               style={{
                 gap: "10px",
-                border: "2px solid #ccc",
+                border: "2px solid white",
+                borderTop:"none",
                 borderRadius: "12px",
                 padding: "4px",
                 height: "100%",
@@ -113,8 +117,11 @@ export function LoginPage() {
               </div>
               <div
                 style={{
-                  border: "2px solid black ",
+                  borderRight: "2px solid black ",
+                  borderBottom: "2px solid black ",
+                  borderLeft: "2px solid black ",
                   borderRadius: "0px 0px 6px 5px",
+                  margin:"0px 4px"
                 }}
               >
                 <FormComponent className="d-flex flex-column">
