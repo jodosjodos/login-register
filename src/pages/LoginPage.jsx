@@ -21,7 +21,8 @@ const LoginButton = styled(FullWidthButton)`
   background-color: #6713a0;
   border-radius: 6px 10px 0px 0px;
   border: 2px solid black;
-  &:hover,&:active {
+  &:hover,
+  &:active {
     background-color: #cbbbf7;
     color: #21004c;
     border: 2px solid black;
@@ -32,7 +33,6 @@ const SignUpButton = styled(FullWidthButton)`
   background-color: #76c1b5;
   border-radius: 10px 6px 0px 0px;
   border: 2px solid black;
-
 
   &:hover {
     background-color: #087865;
@@ -45,13 +45,13 @@ const LoginButton2 = styled(Button)`
   background-color: #cbbbf7;
   margin-bottom: 4px;
   border: none;
-  align-self:center;
-  justify-self:center;
+  align-self: center;
+  justify-self: center;
   color: #21004c;
-  height:auto;
-  font-weight:bold;
+  height: auto;
+  font-weight: bold;
 
-  width:40%;
+  width: 40%;
   &:hover {
     background-color: #6713a0;
     color: white;
@@ -74,7 +74,7 @@ const FormComponent = styled(Form)`
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 `;
 const Header = styled(CardHeader)`
@@ -91,7 +91,9 @@ export function LoginPage() {
     navigate("/signUp");
   };
   return (
-    <div style={{ height: "100%", padding: "0px 4px" ,background:"#0000001A"}}>
+    <div
+      style={{ height: "100%", padding: "0px 4px", background: "#0000001A" }}
+    >
       <Header>
         <h1>Login</h1>
       </Header>
@@ -106,16 +108,14 @@ export function LoginPage() {
               style={{
                 gap: "10px",
                 border: "2px solid white",
-                borderTop:"none",
+                borderTop: "none",
                 borderRadius: "12px",
                 padding: "4px",
                 height: "100%",
                 backgroundColor: "white",
               }}
             >
-              <div
-                style={{ width: "100%", display: "flex"}}
-              >
+              <div style={{ width: "100%", display: "flex" }}>
                 <LoginButton>Login</LoginButton>
                 <SignUpButton onClick={handleSignUp}>Sign up</SignUpButton>
               </div>
@@ -125,7 +125,7 @@ export function LoginPage() {
                   borderBottom: "2px solid black ",
                   borderLeft: "2px solid black ",
                   borderRadius: "0px 0px 6px 5px",
-                  margin:"0px 4px"
+                  margin: "0px 4px",
                 }}
               >
                 <FormComponent className="d-flex flex-column">
