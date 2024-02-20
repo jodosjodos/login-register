@@ -34,7 +34,6 @@ const SignUpButton = styled(FullWidthButton)`
 `;
 
 const LoginButton2 = styled(FullWidthButton)`
-  display: block;
   background-color: #cbbbf7;
   margin-bottom: 4px;
   color: #21004c;
@@ -112,7 +111,7 @@ export function LoginPage() {
                   <Form.Label>Password</Form.Label>
                   <CustomInput type="email" placeholder="value"></CustomInput>
                 </Form.Group>
-                <LoginButton2>Let's go</LoginButton2>
+                <LoginButton2>Let&apos;s go</LoginButton2>
               </FormComponent>
             </Col>
           </Row>

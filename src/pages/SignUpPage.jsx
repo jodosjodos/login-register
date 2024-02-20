@@ -121,7 +121,7 @@ export function SignUpPage() {
                 <Labeled>Password</Labeled>
                 <CustomInput type="email" placeholder="value"></CustomInput>
               </Form.Group>
-              <LoginButton2>Let's go</LoginButton2>
+              <LoginButton2>Let&apos;s go</LoginButton2>
               <div className="d-flex align-items-center justify-content-center gap-2">
                 <hr style={{ width: "30%" }} />
                 <p className="mb-1">or continue with </p>
