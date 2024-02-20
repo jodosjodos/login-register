@@ -20,19 +20,27 @@ const FullWidthButton = styled(Button)`
 const LoginButton = styled(FullWidthButton)`
   background-color: #cbbbf7;
   border-radius: 5px 5px 0px 0px;
-
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
   &:hover {
     background-color: #6713a0;
     color: white;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
   }
 `;
 
 const SignUpButton = styled(FullWidthButton)`
   background-color: #087865;
   border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
   &:hover {
     background-color: #76c1b5;
     color: white;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
   }
 `;
 
@@ -41,10 +49,12 @@ const LoginButton2 = styled(FullWidthButton)`
   background-color: #b2e5dd;
   margin-bottom: 4px;
   color: #00382f;
+  
   font-weight: bold;
   &:hover {
     background-color: #087865;
     color: white;
+   
   }
 `;
 
@@ -64,7 +74,7 @@ const FormComponent = styled(Form)`
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 12px 40px;
 `;
 const Labeled = styled(Form.Label)`
   font-weight: bold;
@@ -90,23 +100,23 @@ export function SignUpPage() {
             md={6}
             style={{
               gap: "16px",
-              border: "2px solid black",
+              border: "2px solid #ccc",
               borderRadius: "12px",
-              outline: "medium double #ccc",
-              padding: "12px",
+              padding: "4px",
               height: "100%",
-              display: "flex",
-              flexDirection: "column",
+              backgroundColor: "white",
             }}
           >
-            <Row>
-              <Col xs={6}>
+            <div style={{ width: "100%", display: "flex"}}>
                 <LoginButton onClick={handleLogin}>Login</LoginButton>
-              </Col>
-              <Col xs={6}>
                 <SignUpButton>Sign up</SignUpButton>
-              </Col>
-            </Row>
+            </div>
+            <div
+                style={{
+                  border: "2px solid black ",
+                  borderRadius: "0px 0px 6px 5px",
+                }}
+              >
             <FormComponent className="d-flex flex-column">
               <Form.Group className="mb-4">
                 <Labeled>Email address</Labeled>
@@ -145,6 +155,7 @@ export function SignUpPage() {
                 </CustomCol>
               </Row>
             </FormComponent>
+            </div>
           </Col>
         </Row>
       </StyledContainer>

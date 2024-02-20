@@ -19,17 +19,28 @@ const FullWidthButton = styled(Button)`
 
 const LoginButton = styled(FullWidthButton)`
   background-color: #6713a0;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
   &:hover {
     background-color: #cbbbf7;
     color: #21004c;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
   }
 `;
 
 const SignUpButton = styled(FullWidthButton)`
   background-color: #76c1b5;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+
   &:hover {
     background-color: #087865;
     color: white;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
   }
 `;
 
@@ -59,7 +70,7 @@ const FormComponent = styled(Form)`
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding:12px 40px
 `;
 const Header = styled(CardHeader)`
   display: flex;
@@ -78,7 +89,7 @@ export function LoginPage() {
         <h1>Login</h1>
       </Header>
       <div style={{ height: "80%" }}>
-        <StyledContainer className="" style={{ justifyContent: "flex-start" }}>
+        <StyledContainer style={{ justifyContent: "flex-start" }}>
           <Row
             className="justify-content-center"
             style={{ height: "fit-content" }}
@@ -87,32 +98,37 @@ export function LoginPage() {
               md={6}
               style={{
                 gap: "10px",
-                border: "2px solid black",
+                border: "2px solid #ccc",
                 borderRadius: "12px",
-                outline: "medium double #ccc",
-                padding: "12px",
+                padding: "4px",
                 height: "100%",
+                backgroundColor: "white",
               }}
             >
-              <Row>
-                <Col xs={6}>
-                  <LoginButton>Login</LoginButton>
-                </Col>
-                <Col xs={6}>
-                  <SignUpButton onClick={handleSignUp}>Sign up</SignUpButton>
-                </Col>
-              </Row>
-              <FormComponent className="d-flex flex-column">
-                <Form.Group className="mb-4">
-                  <Form.Label>Username</Form.Label>
-                  <CustomInput type="text" placeholder="value"></CustomInput>
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label>Password</Form.Label>
-                  <CustomInput type="email" placeholder="value"></CustomInput>
-                </Form.Group>
-                <LoginButton2>Let&apos;s go</LoginButton2>
-              </FormComponent>
+              <div
+                style={{ width: "100%", display: "flex"}}
+              >
+                <LoginButton>Login</LoginButton>
+                <SignUpButton onClick={handleSignUp}>Sign up</SignUpButton>
+              </div>
+              <div
+                style={{
+                  border: "2px solid black ",
+                  borderRadius: "0px 0px 6px 5px",
+                }}
+              >
+                <FormComponent className="d-flex flex-column">
+                  <Form.Group className="mb-4">
+                    <Form.Label>Username</Form.Label>
+                    <CustomInput type="text" placeholder="value"></CustomInput>
+                  </Form.Group>
+                  <Form.Group className="mb-4">
+                    <Form.Label>Password</Form.Label>
+                    <CustomInput type="email" placeholder="value"></CustomInput>
+                  </Form.Group>
+                  <LoginButton2>Let&apos;s go</LoginButton2>
+                </FormComponent>
+              </div>
             </Col>
           </Row>
         </StyledContainer>
