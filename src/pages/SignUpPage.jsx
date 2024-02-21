@@ -89,6 +89,7 @@ const Header = styled(CardHeader)`
   align-items: center;
   justify-content: center;
 `;
+// sign up
 export function SignUpPage() {
   const navigate = useNavigate();
   const handleLogin = () => {
