@@ -99,6 +99,7 @@ export function SignUpPage() {
     <div
       style={{ height: "100%", padding: "0px 4px", background: "#0000001A" }}
     >
+    {/* styled header */}
       <Header>
         <h1>Sign up</h1>
       </Header>
