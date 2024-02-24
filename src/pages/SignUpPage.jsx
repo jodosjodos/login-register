@@ -125,6 +125,7 @@ export function SignUpPage() {
                 <LoginButton onClick={handleLogin}>Login</LoginButton>
                 <SignUpButton>Sign up</SignUpButton>
               </div>
+              {/* styled form */}
               <div
                 style={{
                   borderRight: "2px solid black ",
