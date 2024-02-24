@@ -145,6 +145,7 @@ export function SignUpPage() {
                     <Labeled>Username</Labeled>
                     <CustomInput type="text" placeholder="value"></CustomInput>
                   </Form.Group>
+                  {/* form Group */}
                   <Form.Group className="mb-4">
                     <Labeled>Password</Labeled>
                     <CustomInput type="email" placeholder="value"></CustomInput>
