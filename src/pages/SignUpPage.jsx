@@ -175,6 +175,7 @@ export function SignUpPage() {
                     <CustomCol>
                       <img src="/metamask.png" alt="metamask image" />
                     </CustomCol>
+                    
                     <CustomCol>
                       <img src="/unknown.png" alt="unknown image" />
                     </CustomCol>
